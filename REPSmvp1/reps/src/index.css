@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@theme {
+  --font-display: "Anton", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-neon-green: #00FF00;
+  --color-brutal-black: #000000;
+  --color-brutal-gray: #1A1A1A;
+  --color-brutal-white: #FFFFFF;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-brutal-white text-brutal-black transition-colors duration-300;
+  }
+
+  .dark body {
+    @apply bg-brutal-black text-brutal-white;
+  }
+}
+
+/* Custom Utilities */
+@utility brutal-shadow {
+  box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+}
+
+@utility brutal-shadow-white {
+  box-shadow: 4px 4px 0px 0px rgba(255,255,255,1);
+}
+
+@utility brutal-shadow-sm {
+  box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+}
+
+@utility brutal-shadow-sm-white {
+  box-shadow: 2px 2px 0px 0px rgba(255,255,255,1);
+}
+
